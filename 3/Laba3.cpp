@@ -86,11 +86,24 @@ int main()
     {
         cout<<"No arithmetic mean: "<<endl;
     }
-
-
+    int kk,b;
+    cout<<"Enter slide: ";
+    cin>>kk;
+    for(int i=0;i<kk;i++){
+    b = arr[n-1];
+    for(int j=n-1;j>0;j--){
+        arr[j]=arr[j-1];
+    }
+     arr[0]=b;
+    }
+    cout<<"Slided array: "<<endl;
+    for (int i=0; i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
     return 0;
 }
-
 
 
 
