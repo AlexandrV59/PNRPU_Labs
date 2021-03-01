@@ -34,28 +34,21 @@ List* make(int size){
 
 void del(List* &first){
 		List*p = first;
-		while(p->data != (p->data %2 == 1)){
-				List* q= first;
-				first = p-> next;
-				delete q;
-				p=first;
-				p->prev = NULL;
+		while(p->data %2 != 0){
+            p=p->next;
 		}
-		while(p->next!=NULL){
-				if(p->next->data==(p->data %2 ==1)){
-					List* q = p->next;
-					List* d = p->next->prev;
-					p->next=p->next->next;
-					p->next->prev=d;
-					delete q;
-				}
-				else p=p->next;
-		}
+        List* q = p;
+        List* h = p->prev;
+        h->next=p->next;
+        p->next->prev=h;
+        delete q;
 }
 void print(List* first){
+        
 		if(first==NULL){
 				cout<<"Empty list"<<endl;
 		}else{
+                cout<<"|";
 				List* p = first;
 				while(p != NULL){
 					cout<< p-> data<<"|";
@@ -71,7 +64,7 @@ int main(){
 		cin>>size;
 
 		List* list=make(size);
-		cout<<"List: |";
+		cout<<"List:";
 		print(list);
 		del(list);
 		print(list);
