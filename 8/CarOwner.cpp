@@ -237,38 +237,6 @@ int main(){
         cout<<"   "<<person[i].PhoneNumber<<endl;
         cout<<"   "<<person[i].TechPassNumber<<endl;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     return 0;
 }
 
