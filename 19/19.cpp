@@ -1,9 +1,11 @@
 #include <iostream>
 using namespace std;
 char a;
-struct stack{
+class stack{
+public:   
 char data;
 stack* prev;
+   
 };
 
 stack* make_stack(int n)
@@ -82,6 +84,7 @@ stack* st = make_stack(n);
 cout << "Stack:";
 print(st);
 add(st, n);
+cout<<endl;
 cout << "After:";
 print(st);
 return 0;
