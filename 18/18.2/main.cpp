@@ -23,12 +23,12 @@ void print_salary(salary s){
 int main(){
     salary s1;
     s1.show();
-    salary s2("Niki Lauda",250000,30);
+    salary s2("Niki Lauda",250000,250000%30);
     s2.show();
     salary s3=s2;
-    s3.get_fnp("Fernando");
+    s3.set_fnp("Fernando");
     s3.set_wage(150000);
-    s3.set_bonus(25);
+    s3.set_bonus(150000%25);
     print_salary(s3);
     s1=get_salary();
     s1.show();
